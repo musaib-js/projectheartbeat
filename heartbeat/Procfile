@@ -1,0 +1,2 @@
+web: gunicorn heartbeat.wsgi --log-file -
+web: python manage.py collectstatic --no-input; gunicorn heartbeat.wsgi --log-file - --log-level debug
